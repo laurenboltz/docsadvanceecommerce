@@ -10,7 +10,13 @@ datagroup: lauren_ecommerce_docs_default_datagroup {
 
 persist_with: lauren_ecommerce_docs_default_datagroup
 
+explore: test_abcdef {}
 
+explore: user_order_facts {}
+
+explore: order_facts_facts {}
+
+explore: order_facts {}
 
 explore: events {
   join: users {
