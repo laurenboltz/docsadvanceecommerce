@@ -29,7 +29,7 @@ explore: inventory_items {
 }
 
 explore: order_items {
-  group_label: "eCommerce"
+  group_label: "LoBo eCommerce"
   query: order_count_by_month {
     label: "Order count by month"
     description: "Number of orders placed by month in 2019"
