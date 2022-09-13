@@ -12,21 +12,6 @@ persist_with: lauren_ecommerce_docs_default_datagroup
 
 
 
-explore: events {
-  join: users {
-    type: left_outer
-    sql_on: ${events.user_id} = ${users.id} ;;
-    relationship: many_to_one
-  }
-}
-
-explore: inventory_items {
-  join: products {
-    type: left_outer
-    sql_on: ${inventory_items.product_id} = ${products.id} ;;
-    relationship: many_to_one
-  }
-}
 
 explore: order_items {
   group_label: "LoBo eCommerce"
@@ -78,20 +63,36 @@ explore: order_items {
   }
 }
 
-explore: orders {
-  group_label: "eCommerce"
-  join: users {
-    type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
-    relationship: many_to_one
-  }
-}
+# explore: orders {
+#   group_label: "eCommerce"
+#   join: users {
+#     type: left_outer
+#     sql_on: ${orders.user_id} = ${users.id} ;;
+#     relationship: many_to_one
+#   }
+# }
 
-explore: products {
-  group_label: "eCommerce"
-}
+# explore: products {
+#   group_label: "eCommerce"
+# }
 
 
-explore: users {
-  group_label: "eCommerce"
-}
+# explore: users {
+#   group_label: "eCommerce"
+# }
+
+# explore: events {
+#   join: users {
+#     type: left_outer
+#     sql_on: ${events.user_id} = ${users.id} ;;
+#     relationship: many_to_one
+#   }
+# }
+
+# explore: inventory_items {
+#   join: products {
+#     type: left_outer
+#     sql_on: ${inventory_items.product_id} = ${products.id} ;;
+#     relationship: many_to_one
+#   }
+# }
